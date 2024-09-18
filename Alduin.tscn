@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://cm5dpdxtkji8e"]
+
+[ext_resource type="Script" path="res://Alduin.gd" id="1_0dc15"]
+[ext_resource type="Texture2D" uid="uid://djpmy7v6c5fu4" path="res://assets/sprites/gfx/flying_dragon-1.1/PNG/144x128/flying_dragon-gold.png" id="1_xhxm4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et18e"]
+atlas = ExtResource("1_xhxm4")
+region = Rect2(0, 384, 144, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o24at"]
+atlas = ExtResource("1_xhxm4")
+region = Rect2(144, 384, 144, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xokte"]
+atlas = ExtResource("1_xhxm4")
+region = Rect2(288, 384, 144, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lhxsh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_et18e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o24at")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xokte")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yanlt"]
+radius = 31.1448
+
+[node name="Alduin" type="CharacterBody2D"]
+script = ExtResource("1_0dc15")
+health = 30
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -65)
+sprite_frames = SubResource("SpriteFrames_lhxsh")
+autoplay = "default"
+frame_progress = 0.930653
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -69)
+shape = SubResource("CircleShape2D_yanlt")
