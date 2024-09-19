@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvr3kfb0bjkic"]
+
+[ext_resource type="Script" path="res://Exit.gd" id="1_p4bri"]
+[ext_resource type="Script" path="res://Replay.gd" id="2_hf2yl"]
+
+[node name="DEAD" type="Node2D"]
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 591.0
+offset_top = 246.0
+offset_right = 628.0
+offset_bottom = 277.0
+text = "Exit"
+script = ExtResource("1_p4bri")
+
+[node name="Replay" type="Button" parent="."]
+offset_left = 577.0
+offset_top = 192.0
+offset_right = 642.0
+offset_bottom = 223.0
+text = "Re-play"
+script = ExtResource("2_hf2yl")
+
+[node name="GAME OVER" type="Label" parent="."]
+offset_left = 216.0
+offset_top = -36.0
+offset_right = 955.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 135
+text = "Game Over"
+
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]
+[connection signal="pressed" from="Replay" to="Replay" method="_on_pressed"]
