@@ -48,4 +48,6 @@ texture_filter = 1
 position = Vector2(1, -65)
 sprite_frames = SubResource("SpriteFrames_lhxsh")
 autoplay = "default"
-frame_progress = 0.930653
+frame = 1
+frame_progress = 0.340817
+flip_h = true
