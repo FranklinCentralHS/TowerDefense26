@@ -6,26 +6,26 @@
 [node name="DEAD" type="Node2D"]
 
 [node name="Exit" type="Button" parent="."]
-offset_left = 591.0
-offset_top = 246.0
-offset_right = 628.0
-offset_bottom = 277.0
+offset_left = 589.0
+offset_top = 212.0
+offset_right = 626.0
+offset_bottom = 243.0
 text = "Exit"
 script = ExtResource("1_p4bri")
 
 [node name="Replay" type="Button" parent="."]
 offset_left = 577.0
-offset_top = 192.0
+offset_top = 166.0
 offset_right = 642.0
-offset_bottom = 223.0
+offset_bottom = 197.0
 text = "Re-play"
 script = ExtResource("2_hf2yl")
 
 [node name="GAME OVER" type="Label" parent="."]
-offset_left = 216.0
-offset_top = -36.0
-offset_right = 955.0
-offset_bottom = 155.0
+offset_left = 229.0
+offset_top = -13.0
+offset_right = 968.0
+offset_bottom = 178.0
 theme_override_font_sizes/font_size = 135
 text = "Game Over"
 
